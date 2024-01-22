@@ -12,8 +12,10 @@ body {
 
 header nav ul {
     list-style: none;
-    padding: 0;
+    text-align: center;
+    padding: 20px 0;
     background-color: #333;
+    color: white;
 }
 
 header nav ul li {
