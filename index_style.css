@@ -9,22 +9,34 @@ body {
 /* General styles for the navigation bar */
 nav {
     background-color: black;
-    padding: 10px;
     text-align: center;
     position: relative;
+    padding: 40px; /* Adjusted padding-top */
+    
 }
 
 .nav-logo img {
-    width: 50px; /* Adjust size as needed */
+    display: none;
+}
+
+.nav-icon {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Styles for navigation in mobile devices */
 .nav-menu {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
     list-style: none;
     margin: 0;
     padding: 0;
+    height: 50px; /* Set a specific height for the nav-menu */
 }
 
 .nav-menu li {
@@ -65,46 +77,26 @@ nav {
     transform: translateY(8px);
 }
 
-/* Styles for mobile devices */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        right: 0;
-        background-color: black;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .nav-menu li {
-        text-align: center;
-        margin: 10px 0;
-    }
-}
-
-/* Pseudo-elements for the racing track */
+/* Commented out to remove the white bars */
+/*
 nav::before, nav::after {
     content: '';
     position: absolute;
     top: 50%;
-    width: 100px; /* Width of the track */
-    height: 5px; /* Height of the track */
-    background: white; /* Track color */
+    width: 100px; 
+    height: 5px;
+    background: white;
     transform: translateY(-50%);
 }
 
 nav::before {
-    left: 20px; /* Position from the left */
+    left: 20px;
 }
 
 nav::after {
-    right: 20px; /* Position from the right */
+    right: 20px;
 }
+*/
 
 /* Styling for the main title */
 header {
@@ -162,9 +154,10 @@ header h3 {
 .section1, .section2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: center; /* Centers vertically */
     text-align: center;
     margin: 40px;
+    padding: 40px;
     background-color: black;
     border-color: white;
     border-width: 5px;
@@ -173,8 +166,13 @@ header h3 {
 
 /* Styles for the text and image content */
 .content-text, .content-image {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
     padding: 20px;
     transition: transform 0.3s ease;
+    border-radius: 12px;
 }
 
 .content-text:hover, .content-image:hover {
@@ -205,11 +203,11 @@ header h3 {
 
 /* Styles for images */
 .content-image img {
-    width: 40%;
+    width: 100%; /* Adjust width to 100% of its container */
+    max-width: 400px; /* Optional: limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 20px;
     outline: 10px solid blue;
-    transition: transform 0.3s ease-in-out;
 }
 
 /* Animation for glowing titles */
