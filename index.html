@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="icon" type="image/x-icon" href="/Others/logometa.png">
-    <title>Ultimate Racing</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="simracing, tournament, championship, free, worldwide, crossplatform, gt7, granturismo, formula1, f123">
-    <link rel="stylesheet" href="/Others/Reset.css">
-    <link rel="stylesheet" href="index_style.css">
-</head>
-<body>
-    <!-- The navigation bar -->
-    <nav>
-        <a class="nav-icon" href="index.html">Home</a>
-        <a class="nav-icon" href="f1.html">Formula 1</a>
-        <a class="nav-icon" href="gt7.html">GT7</a>
-        <a class="nav-icon" href="social.html">Social Media</a>
-    </nav>
 
-    <!-- Header for the Title -->
-    <header>
-        <h1>Welcome to Ultimate Racing</h1>
-        <h3>...Where legends are Born...</h3>
-    </header>
+    <head>
+        <link rel="icon" type="image/x-icon" href="/Others/logometa.png">
+        <title>Ultimate Racing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="simracing, tournament, championship, free, worldwide, crossplatform, gt7, granturismo, formula1, f123">
+        <link rel="stylesheet" href="/Others/Reset.css">
+        <link rel="stylesheet" href="index_style.css">
+    </head>
 
-    <!-- Section 1: Introduction -->
-    <div class="section">
-        <div class="content-text">
-            <h2>Welcome to Ultimate Racing</h2>
-            <p>Description about your project and what visitors can expect.</p>
-        </div>
-        <div class="content-image">
-            <img src="/Others/perfectwin.png" alt="Introduction Image">
-        </div>
-    </div>
+    <body>
+        <!-- The navigation bar -->
+        <nav>
+            <div class="nav-logo">
+                <img src="path_to_your_car_logo.jpg" alt="Car Logo">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a class="nav-icon" href="index.html">Home</a></li>
+                <li><a class="nav-icon" href="f1.html">Formula 1</a></li>
+                <li><a class="nav-icon" href="gt7.html">GT7</a></li>
+                <li><a class="nav-icon" href="social.html">Social Media</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Welcome to <span class="blue-gif">ULTIMATE RACING</span></h1>
+            <h3>...Where <span class="yellow-gif">LEGENDS</span> are Born...</h3>
+        </header>
+
+        <!-- Section 1: Introduction -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Welcome to Ultimate Racing</h2>
+                <p>Join us at Ultimate Racing, a vibrant community dedicated to the exhilarating world of sim racing...</p>
+            </div>
+            <div class="content-image">
+                <img src="Others/perfectwin.png" alt="Introduction Image">
+            </div>
+        </div>    
 
     <!-- Section 2: Championship -->
     <div class="section">
@@ -42,7 +51,7 @@
             <p>Details about the championships, rules, and participation information.</p>
         </div>
         <div class="content-image">
-            <img src="/Others/championship.png" alt="Championship Image">
+            <img src="Others/championship.png" alt="Championship Image">
         </div>
     </div>
 
@@ -53,7 +62,7 @@
             <p>Information about the games your community focuses on, like F1 23 and GT7.</p>
         </div>
         <div class="content-image">
-            <img src="/Others/gamers.png" alt="Games Image">
+            <img src="Others/gamers.png" alt="Games Image">
         </div>
     </div>
 
@@ -64,12 +73,25 @@
             <p>Your personal introduction and your role in the Ultimate Racing community.</p>
         </div>
         <div class="content-image">
-            <img src="/Others/community.png" alt="Personal Image">
+            <img src="Others/community.png" alt="Personal Image">
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
-    </footer>
-</body>
+        <footer>
+            <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
+        </footer>
+
+        <!-- JavaScript for the Mobile Navigation Bar version -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const navToggle = document.querySelector('.nav-toggle');
+                const navMenu = document.querySelector('.nav-menu');
+        
+                navToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('is-active');
+                });
+            });
+        </script>
+        
+    </body>
 </html>
