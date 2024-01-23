@@ -1,42 +1,111 @@
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
+/* Style for the full body */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif; /* Readable and modern font */
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Light background for the page */
 }
 
-header nav ul {
-    list-style: none;
+/* Style for the navigation bar */
+nav {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    text-align: center; /* Center align items */
+    padding: 10px; /* Padding for top and bottom */
+    position: relative; /* For the pseudo-elements */
+    margin: 20px;
+}
+
+nav a {
+    color: white; /* Red icons */
+    margin: 0 15px; /* Spacing between links */
+    text-decoration: none; /* Remove underline */
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Pseudo-elements for the racing track */
+nav::before, nav::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px; /* Width of the track */
+    height: 5px; /* Height of the track */
+    background: white; /* Track color */
+    transform: translateY(-50%);
+}
+
+nav::before {
+    left: 20px; /* Position from the left */
+}
+
+nav::after {
+    right: 20px; /* Position from the right */
+}
+
+/* Styling for the main title */
+header {
+    background-color: black;
+    color: white;
+    margin: 50px;
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+header h1 {
+    font-size: 40px;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
+header h3 {
+    font-size: 20px;
+}    
+
+/* Styles for the main content */
+.content {
+    padding: 15px;
+    text-align: center;
 }
 
-main {
-    flex: 1;
+.section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px; /* Spacing between sections */
+}
+
+.content-text, .content-image {
     padding: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
+.content-text {
     color: white;
 }
 
+.content-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    outline: 10px solid red;
+}
+
+/* Alternate layout for odd sections */
+.section:nth-child(odd) {
+    grid-template-areas: "image text";
+}
+
+.section:nth-child(odd) .content-text {
+    grid-area: text;
+}
+
+.section:nth-child(odd) .content-image {
+    grid-area: image;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
