@@ -228,56 +228,112 @@ footer {
     text-align: center;
 }
 
-/* Creating the media query for mobile version */
+/* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
+    body {
+        /* Adjust the body styles for mobile if needed */
+    }
 
-/* Styles for navigation in mobile devices */
-.nav-menu {
-    display: flex;
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 50px; /* Set a specific height for the nav-menu */
-}
+    /* Mobile styles for navigation bar */
+    nav {
+        padding: 20px; /* Reduce padding */
+    }
 
-.nav-menu li {
-    margin: 0 15px;
-}
+    .nav-logo img {
+        /* Adjust logo for mobile if needed */
+    }
 
-.nav-toggle {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
+    .nav-menu {
+        display: none; /* Hide menu initially */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width */
+    }
 
-.hamburger {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    transition: all .3s ease-in-out;
-}
+    .nav-menu.is-active {
+        display: flex; /* Show menu when active */
+    }
 
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: relative;
-    transition: all .3s ease-in-out;
-}
+    .nav-menu li {
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
 
-.hamburger::before {
-    transform: translateY(-8px);
-}
+    .nav-toggle {
+        display: block; /* Show toggle button on mobile */
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
 
-.hamburger::after {
-    transform: translateY(8px);
-}
-    
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+        position: relative;
+        transition: all .3s ease-in-out;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: white;
+        position: absolute;
+        transition: all .3s ease-in-out;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }
+
+    .nav-icon {
+        /* Adjust navigation icons for mobile */
+        padding: 10px; /* Reduce padding */
+        font-size: 16px; /* Adjust font size */
+    }
+
+    header {
+        padding-top: 60px; /* Reduce padding */
+        padding-bottom: 60px;
+        font-size: 60px; /* Adjust font size for header */
+    }
+
+    .section1, .section2 {
+        display: grid;
+        grid-template-columns: 1fr; /* Stack elements vertically */
+        grid-template-areas: none; /* Reset any specific grid areas */
+    }
+
+    .content-text, .content-image {
+        /* Adjust styles for text and images on mobile */
+        padding: 10px; /* Reduce padding */
+        width: 100%; /* Ensure full width */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+
+    .content-text h2 {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .content-text p {
+        font-size: 18px; /* Adjust font size for readability */
+    }
+
+    .content-image img {
+        max-width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    footer {
+        /* Adjust footer styles for mobile if needed */
+    }
 }
