@@ -7,6 +7,7 @@ body {
 }
 
 /* General styles for the navigation bar */
+
 nav {
     background-color: black;
     text-align: center;
@@ -19,19 +20,9 @@ nav {
     display: none;
 }
 
-.nav-icon {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    background-color: blue;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-/* Styles for navigation in mobile devices */
 .nav-menu {
     display: flex;
-    justify-content: center; /* Centers items horizontally */
+    justify-content: space-around; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
     list-style: none;
     margin: 0;
@@ -45,36 +36,21 @@ nav {
 
 .nav-toggle {
     display: none;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+}    
+
+.nav-icon {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: blue;
+    padding: 15px; /* Increased padding */
+    border-radius: 15px; /* Slightly larger border-radius */
+    font-size: 18px; /* Larger font size */
+    transition: transform 0.3s ease;
 }
 
-.hamburger {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    transition: all .3s ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: relative;
-    transition: all .3s ease-in-out;
-}
-
-.hamburger::before {
-    transform: translateY(-8px);
-}
-
-.hamburger::after {
-    transform: translateY(8px);
+nav ul li:hover{
+    transform: scale(1.2);
 }
 
 /* Commented out to remove the white bars */
@@ -104,7 +80,7 @@ header {
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("Others/racingbkgrd.jpg");
+    background-image: url(Others/racingbkgrd.gif);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 120px;
@@ -250,4 +226,58 @@ footer {
     color: white;
     padding: 25px;
     text-align: center;
+}
+
+/* Creating the media query for mobile version */
+@media only screen and (max-width: 600px) {
+
+/* Styles for navigation in mobile devices */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 50px; /* Set a specific height for the nav-menu */
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-toggle {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all .3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+    
 }
