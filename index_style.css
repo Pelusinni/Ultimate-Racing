@@ -16,10 +16,6 @@ nav {
     
 }
 
-.nav-logo img {
-    display: none;
-}
-
 .nav-menu {
     display: flex;
     justify-content: space-around; /* Centers items horizontally */
@@ -32,11 +28,12 @@ nav {
 
 .nav-menu li {
     margin: 0 15px;
-}
+} 
 
-.nav-toggle {
-    display: none;
-}    
+.nav-logo {
+    width: 250px;
+    height: auto;
+}
 
 .nav-icon {
     color: white;
@@ -228,7 +225,6 @@ footer {
     text-align: center;
 }
 
-<<<<<<< Updated upstream
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
     body {
@@ -338,7 +334,7 @@ footer {
         /* Adjust footer styles for mobile if needed */
     }
 }
-=======
+
 /* Hide all content on mobile and show a specific message */
 @media (max-width: 600px) {
     body * {
@@ -376,4 +372,3 @@ footer {
         border-radius: 10px; /* Optional: rounds the corners */
     }
 }
->>>>>>> Stashed changes
