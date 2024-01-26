@@ -335,17 +335,13 @@ footer {
     }
 }
 
-/* Hide all content on mobile and show a specific message */
-@media (max-width: 600px) {
+/* Styles for mobile devices in portrait orientation */
+@media (max-width: 600px) and (orientation: portrait) {
     body * {
         display: none; /* Hide all content */
     }
 
-    .content-text {
-        display: none;
-    }
-
-    .section1, .section2 {
+    .content-text, .section1, .section2 {
         display: none;
     }
 
@@ -363,12 +359,99 @@ footer {
         display: block;
         text-align: center;
         padding: 20px;
-        margin: 0 50px; /* Adjusted margin */
+        margin: 0 50px;
         font-size: 24px; /* Larger font size */
         color: white;
         background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
-        border: 1px solid white; /* Optional: adds a border around the text */
-        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow for a 'magical' effect */
-        border-radius: 10px; /* Optional: rounds the corners */
+        border: 1px solid white;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
     }
+}
+
+/* Additional styles for mobile devices in landscape orientation */
+@media (max-width: 600px) and (orientation: landscape) {
+    body * {
+        display: none; /* Hide all content in landscape mode */
+    }
+
+    body:before {
+        content: '';
+        display: block;
+        background-image: url('/Others/logo.png'); /* Replace with your image path */
+        background-size: cover;
+        height: 300px; /* Adjust as needed */
+        margin-bottom: 30px;
+    }
+
+    body:after {
+        content: 'The mobile app for Ultimate Racing is coming in Summer 2024. Stay tuned!';
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 0 50px;
+        font-size: 24px; /* Larger font size */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
+        border: 1px solid white;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+}
+
+/* Styles for tablets in portrait orientation */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+    body {
+        background-color: black;
+        text-align: center; /* Center align the content */
+    }
+
+    body * {
+        display: none;
+    }
+
+    .content-text, .section1, .section2 {
+        display: none;
+    }
+
+    body:before {
+        content: '';
+        display: block;
+        background-image: url('/Others/rotatetablet.png'); /* Replace with your image path */
+        background-color: white; /* Background color of the image container */
+        background-repeat: no-repeat;
+        background-position: center; /* Center the background image */
+        background-size: contain; /* Adjust the size of the background image */
+        border-radius: 20px; /* Rounded corners for the image container */
+        height: 500px; /* Adjust as needed */
+        margin: 0 auto 30px; /* Center the block with auto margins and add space below */
+        margin-top: 25%;
+        width: 90%; /* Adjust the width as needed */
+    }
+
+    body:after {
+        content: 'Please rotate your tablet to landscape mode for a better experience.';
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 0 50px;
+        font-size: 24px; /* Larger font size */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for readability */
+        border: 1px solid white;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+}
+
+/* Styles for tablets in landscape orientation */
+@media (min-width: 601px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Normal Website View */
+    /* Add your styles for tablets in landscape mode here */
+    /* Example: */
+    body {
+        background-color: white; /* Example background color */
+        /* Add more styling as required */
+    }
+    /* Add specific styling for content elements if needed */
 }
