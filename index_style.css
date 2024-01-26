@@ -7,20 +7,18 @@ body {
 }
 
 /* General styles for the navigation bar */
-
 nav {
     background-color: black;
     text-align: center;
     position: relative;
     padding: 40px; /* Adjusted padding-top */
-    
 }
 
 .nav-logo img {
     display: none;
 }
 
-.nav-menu {
+.navbar {
     display: flex;
     justify-content: space-around; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
@@ -30,15 +28,7 @@ nav {
     height: 50px; /* Set a specific height for the nav-menu */
 }
 
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-toggle {
-    display: none;
-}    
-
-.nav-icon {
+.navbar a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
@@ -49,30 +39,48 @@ nav {
     transition: transform 0.3s ease;
 }
 
-nav ul li:hover{
+.navbar a:hover {
     transform: scale(1.2);
 }
 
-/* Commented out to remove the white bars */
-/*
-nav::before, nav::after {
-    content: '';
+.nav-toggle {
+    display: none;
     position: absolute;
-    top: 50%;
-    width: 100px; 
-    height: 5px;
+    right: 10px;
+    top: 10px;
+}
+
+.nav-logo {
+    height: auto;
+    width: 250px;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
     background: white;
-    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
 }
 
-nav::before {
-    left: 20px;
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: relative;
+    transition: all .3s ease-in-out;
 }
 
-nav::after {
-    right: 20px;
+.hamburger::before {
+    transform: translateY(-8px);
 }
-*/
+
+.hamburger::after {
+    transform: translateY(8px);
+}
 
 /* Styling for the main title */
 header {
@@ -226,58 +234,4 @@ footer {
     color: white;
     padding: 25px;
     text-align: center;
-}
-
-/* Creating the media query for mobile version */
-@media only screen and (max-width: 600px) {
-
-/* Styles for navigation in mobile devices */
-.nav-menu {
-    display: flex;
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    height: 50px; /* Set a specific height for the nav-menu */
-}
-
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-toggle {
-    display: none;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
-.hamburger {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    transition: all .3s ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: white;
-    position: relative;
-    transition: all .3s ease-in-out;
-}
-
-.hamburger::before {
-    transform: translateY(-8px);
-}
-
-.hamburger::after {
-    transform: translateY(8px);
-}
-    
 }

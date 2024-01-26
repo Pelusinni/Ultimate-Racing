@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <link rel="icon" type="image/x-icon" href="/Others/logometa.png">
-        <title>Ultimate Racing</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="simracing, tournament, championship, free, worldwide, crossplatform, gt7, granturismo, formula1, f123">
+        <title>Ultimate Racing - Formula 1</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="/Others/Reset.css">
+        <link rel="icon" type="image/x-icon" href="/Others/logometa.png">
         <link rel="stylesheet" href="index_style.css">
     </head>
-
     <body>
-        <!-- The navigation bar -->
         <nav>
-            <div class="nav-logo">
-                <img src="Others/logo.png" alt="Car Logo">
-            </div>
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
             </button>
-            <ul class="nav-menu">
-                <li><a class="nav-icon" href="index.html"><i class="fa fa-home"></i> Home</a></li>
-                <li><a class="nav-icon" href="f1.html"><i class="fa fa-flag-checkered"></i> Formula 1</a></li>
-                <li><a class="nav-icon" href="gt7.html"><i class="fa fa-car"></i> GT7</a></li>
-                <li><a class="nav-icon" href="social.html"><i class="fa fa-hashtag"></i> Social Media</a></li>
-            </ul>            
+            <div class="navbar" id="navbar">
+                <img class="nav-logo" src="Others/logo.png" alt="Car Logo">
+                <a class="nav-icon" href="index.html"><i class="fa fa-home"></i> Home</a>
+                <a class="nav-icon" href="f1.html"><i class="fa fa-flag-checkered"></i> Formula 1</a>
+                <a class="nav-icon" href="gt7.html"><i class="fa fa-car"></i> GT7</a>
+                <a class="nav-icon" href="social.html"><i class="fa fa-hashtag"></i> Social Media</a>
+            </div>
         </nav>
 
         <!-- Header for the Title -->
@@ -84,17 +77,5 @@
             <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
         </footer>
 
-        <!-- JavaScript for the Mobile Navigation Bar version -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const navToggle = document.querySelector('.nav-toggle');
-                const navMenu = document.querySelector('.nav-menu');
-        
-                navToggle.addEventListener('click', function () {
-                    navMenu.classList.toggle('is-active');
-                });
-            });
-        </script>
-        
     </body>
 </html>
