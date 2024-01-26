@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ultimate Racing - Formula 1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="../Others/logometa.png">
+        <link rel="stylesheet" href="../Others/Reset.css">
+        <link rel="stylesheet" href="index_style.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="nav-menu">
+                <img class="nav-logo" src="../Others/logo.png" alt="Car Logo">
+                <li><a class="nav-icon" href="../index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a class="nav-icon" href="Inscription/index.html"><i class="fa fa-edit"></i> Inscription</a></li>
+                <li><a class="nav-icon" href=""><i class="fa fa-trophy"></i> Classification</a></li>
+                <li><a class="nav-icon" href=""><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a class="nav-icon" href=""><i class="fa fa-users"></i> Members</a></li>
+                <li><a class="nav-icon" href=""><i class="fa fa-thumbs-up"></i> Social Media</a></li>
+            </ul>            
+        </nav>
+
+
+        <!-- JavaScript for the Mobile Navigation Bar version -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('is-active');
+                });
+            });
+        </script>
+
+        <!-- Header for the Title -->
+        <header>
+            <h1>Welcome to <span class="red-gif">ULTIMATE FORMULA</span></h1>
+            <h3>Apex <span class="yellow-gif">MASTERY</span>, Braking at the <span class="yellow-gif">EDGE</span></h3>
+        </header>
+
+        <!-- Section 1: Count Down Until Pre-Season -->
+        <div id="countdown">
+            <h3>Countdown to Pre-Season:</h3>
+            <div id="timer">
+                <span id="days"></span> days,
+                <span id="hours"></span> hours,
+                <span id="minutes"></span> minutes,
+                <span id="seconds"></span> seconds
+            </div>
+        </div>
+
+        <script>
+            var countDownDate = new Date("Jun 7, 2024 09:00:00").getTime();
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("timer").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+
+        <!-- Section 2: Introduction to Championship -->
+        <div class="section2">
+            <div class="content-text">
+                <h2>Welcome to the Ultimate Formula Championship</h2>
+                <p>Embark on a thrilling journey with the Ultimate Formula Championship, where speed meets strategy, and every second counts. This championship is not just a race; it's a spectacle of engineering excellence and human endurance. Compete against the best drivers in the world and experience the adrenaline rush of navigating challenging circuits. Our event's history is rich with legendary moments and groundbreaking achievements, setting new standards in motorsport. Join us in celebrating the spirit of racing and be a part of this incredible adventure.</p>
+            </div>
+            <div class="content-image">
+                <img src="../Others/ultimateformulalogo.png" alt="Championship Image">
+            </div>
+        </div>
+
+        <!-- Section 3: Weekend Structure & Settings -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Weekend Structure</h2>
+                <p>Qualy: Short, Parc Fermé: Deactivated</p>
+                <p>Sprints: To be determined (Yes: Qualy + Sprint + Race or Qualy + Race, No: -)</p>
+                <p>Race: Formation Lap: Immersive, Safety Car: Immersive, Damage: Standard, Duration: 35%, Weather: Realistic + IA</p>
+            </div>
+            <div class="content-image">
+                <img src="../Others/calendaricon.png" alt="Calendar">
+            </div>
+        </div>
+
+        <!-- Section 4: Implemented IA for FIA -->
+        <div class="section2">
+            <div class="content-text">
+                <h2>Fédération Internationale de l'Automobile (FIA) and ChatGPT-4 Turbo</h2>
+                <p>The FIA, in partnership with ChatGPT-4 Turbo, is committed to promoting safe, sustainable, and accessible motorsport. Our use of advanced AI technologies ensures transparency and fairness in all decisions.</p>
+            </div>
+            <div class="content-image GPT">
+                <img src="../Others/GPT.png" alt="GPT-Image">
+            </div>
+        </div>
+
+        <!-- Section 5: Good Luck & Share -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Good Luck and Stay Connected</h2>
+                <p>Good luck to all participants! Don't forget to share your experience with friends and set up a YouTube or Twitch channel for streaming your races and qualifications. This is crucial for FIA reviews and maintaining the integrity of our championship.</p>
+            </div>
+            <div class="content-image">
+                <img src="../Others/luckycharm.png" alt="Lucky Image">
+            </div>
+        </div>
+
+        <!-- Footer -->    
+        <footer>
+            <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>
