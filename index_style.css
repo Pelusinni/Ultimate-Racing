@@ -228,6 +228,7 @@ footer {
     text-align: center;
 }
 
+<<<<<<< Updated upstream
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 600px) {
     body {
@@ -337,3 +338,42 @@ footer {
         /* Adjust footer styles for mobile if needed */
     }
 }
+=======
+/* Hide all content on mobile and show a specific message */
+@media (max-width: 600px) {
+    body * {
+        display: none; /* Hide all content */
+    }
+
+    .content-text {
+        display: none;
+    }
+
+    .section1, .section2 {
+        display: none;
+    }
+
+    body:before {
+        content: '';
+        display: block;
+        background-image: url('/Others/logo.png'); /* Replace with your image path */
+        background-size: cover;
+        height: 300px; /* Adjust as needed */
+        margin-bottom: 30px;
+    }
+
+    body:after {
+        content: 'The mobile app for Ultimate Racing is coming in Summer 2024. Stay tuned!';
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 0 50px; /* Adjusted margin */
+        font-size: 24px; /* Larger font size */
+        color: white;
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background for readability */
+        border: 1px solid white; /* Optional: adds a border around the text */
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow for a 'magical' effect */
+        border-radius: 10px; /* Optional: rounds the corners */
+    }
+}
+>>>>>>> Stashed changes
