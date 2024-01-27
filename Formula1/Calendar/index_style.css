@@ -1,0 +1,132 @@
+/* Style for the full body */
+body {
+    font-family: Arial, sans-serif; /* Readable and modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background for F1 theme */
+    color: white; /* White text for contrast */
+}
+
+nav {
+    background-color: black;
+    text-align: center;
+    position: relative;
+    padding: 40px; /* Adjusted padding-top */
+    
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 50px; /* Set a specific height for the nav-menu */
+}
+
+.nav-menu li {
+    margin: 0 15px;
+} 
+
+.nav-logo {
+    width: auto;
+    height: auto;
+}
+
+.nav-icon {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    background-color: red;
+    padding: 15px; /* Increased padding */
+    border-radius: 15px; /* Slightly larger border-radius */
+    font-size: 18px; /* Larger font size */
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover{
+    transform: scale(1.2);
+}
+
+/* Commented out to remove the white bars */
+/*
+nav::before, nav::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px; 
+    height: 5px;
+    background: white;
+    transform: translateY(-50%);
+}
+
+nav::before {
+    left: 20px;
+}
+
+nav::after {
+    right: 20px;
+}
+*/
+
+/* Styles for F1 Calendar */
+.f1-calendar {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #202020; /* Dark gray for F1 theme */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.f1-calendar h1 {
+    color: #d40d12; /* F1 red color */
+    margin-bottom: 30px;
+}
+
+.f1-calendar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.f1-calendar li {
+    background-color: #282828; /* Slightly lighter gray for items */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circuit {
+    font-weight: bold;
+}
+
+.date {
+    color: #d40d12; /* F1 red color */
+}
+
+.content-image img {
+    width: 100px; /* Adjust as necessary */
+    height: auto;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .f1-calendar {
+        width: 95%;
+    }
+
+    .f1-calendar li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content-image img {
+        margin: 10px 0;
+    }
+}

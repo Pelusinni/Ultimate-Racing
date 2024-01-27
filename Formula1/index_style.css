@@ -18,6 +18,7 @@ nav {
 
 .nav-menu {
     display: flex;
+    height: auto;
     justify-content: space-around; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
     list-style: none;
@@ -31,8 +32,9 @@ nav {
 } 
 
 .nav-logo {
-    width: 250px;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    outline: red 2px solid;
 }
 
 .nav-icon {
@@ -222,6 +224,10 @@ header h3 {
     animation: fadeIn 2s;
 }
 
+.redy {
+    color: red;
+}
+
 /* Styles for images */
 .content-image img {
     width: 100%; /* Adjust width to 100% of its container */
@@ -247,6 +253,13 @@ body {
 .section1, .section2 {
     padding: 40px;
     margin-bottom: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
 /* Animation for glowing titles */

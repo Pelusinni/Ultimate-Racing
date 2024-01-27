@@ -81,28 +81,36 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 header h1 {
     font-size: 40px;
 }
 
-/* Style for the Google form */
+/* Styling for the Google Form */
 .google-form {
     display: flex;
     justify-content: center; /* Horizontally center the iframe */
     align-items: center; /* Vertically center the iframe */
-    margin: 20px; /* Add some margin around the form */
-    padding: 20px; /* Add padding for better spacing */
-    height: 100%; /* Set the height to fit the container */
+    margin: 20px; /* Margin around the form */
+    padding: 20px; /* Padding for better spacing */
+    min-height: 80vh; /* Minimum height */
+    width: 100%; /* Full width */
 }
 
 .google-form iframe {
-    width: 100%; /* Responsive width up to the max width */
-    max-width: 800px; /* Maximum width of the form */
-    height: 600px; /* Fixed height */
+    width: 80vw; /* 80% of the viewport width */
+    height: 80vh; /* 80% of the viewport height */
     border: none; /* Remove the border */
+}
+
+/* Setting up the footer... */
+footer {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
 /* Media Query for Mobile Devices */
