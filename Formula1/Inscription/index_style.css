@@ -31,8 +31,9 @@ nav {
 } 
 
 .nav-logo {
-    width: 250px;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    outline: red 2px solid;
 }
 
 .nav-icon {

@@ -1,12 +1,13 @@
 /* Style for the full body */
 body {
-    font-family: Arial, sans-serif; /* Readable and modern font */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Dark background for F1 theme */
-    color: white; /* White text for contrast */
+    background-color: #1a1a1a;
+    color: white;
 }
 
+/* Style for the navigation Bar */
 nav {
     background-color: black;
     text-align: center;
@@ -30,8 +31,9 @@ nav {
 } 
 
 .nav-logo {
-    width: auto;
-    height: auto;
+    width: 100px;
+    height: 100px;
+    outline: red 2px solid;
 }
 
 .nav-icon {
@@ -71,62 +73,68 @@ nav::after {
 */
 
 /* Styles for F1 Calendar */
-.f1-calendar {
-    width: 80%;
+.f1-calendar-container {
+    max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #202020; /* Dark gray for F1 theme */
+    background-color: #202020;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.f1-calendar h1 {
-    color: #d40d12; /* F1 red color */
+.f1-calendar-container h1 {
+    color: #d40d12;
+    text-align: center;
     margin-bottom: 30px;
+    font-size: 48px; /* Increased font size for the title */
 }
 
-.f1-calendar ul {
-    list-style: none;
-    padding: 0;
+.race-schedule {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min width for larger images */
+    gap: 10px;
 }
 
-.f1-calendar li {
-    background-color: #282828; /* Slightly lighter gray for items */
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
+.race-entry {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Two columns: one for the race info and one for the date and weather */
+    gap: 20px; /* Increase gap for clearer separation */
     align-items: center;
-}
-
-.circuit {
-    font-weight: bold;
-}
-
-.date {
-    color: #d40d12; /* F1 red color */
-}
-
-.content-image img {
-    width: 100px; /* Adjust as necessary */
-    height: auto;
+    padding: 20px; /* Increased padding for more space */
+    background-color: #282828;
     border-radius: 5px;
-    margin-left: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .f1-calendar {
-        width: 95%;
-    }
+.race-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between flag and race name */
+}
 
-    .f1-calendar li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.flag img {
+    width: 80px; /* Adjust as necessary */
+    height: auto;
+}
 
-    .content-image img {
-        margin: 10px 0;
-    }
+.race-name {
+    font-weight: bold;
+    font-size: 24px; /* Increased font size */
+}
+
+.race-date {
+    text-align: left; /* Align the date to the left within its cell */
+    font-weight: bold;
+    color: #d40d12;
+    margin-right: 10px; /* Ensure some space between the date and the weather */
+}
+
+.race-weather {
+    text-align: right; /* Forecast to the right within its cell */
+    font-weight: bold;
+    color: white;
+}
+
+.weather-icon {
+    font-size: 24px; /* Set size for weather icons */
+    margin-left: 5px; /* Space between the text and icon */
 }
