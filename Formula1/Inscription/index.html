@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscription</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="../../Others/logometa.png">
+        <link rel="stylesheet" href="../../Others/Reset.css">
+        <link rel="stylesheet" href="index_style.css">
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul class="nav-menu">
+                <a href="../../index.html">
+                    <img class="nav-logo" src="../../Others/logo.png" alt="Car Logo">
+                </a>
+                <li><a class="nav-icon" href="../../index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a class="nav-icon" href="../index.html"><i class="fa fa-edit"></i> Inscription</a></li>
+                <li><a class="nav-icon" href="../Classification/index.html"><i class="fa fa-trophy"></i> Classification</a></li>
+                <li><a class="nav-icon" href="../Calendar/index.html"><i class="fa fa-calendar"></i> Calendar</a></li>
+                <li><a class="nav-icon" href="../Members/index.html"><i class="fa fa-users"></i> Members</a></li>
+                <li><a class="nav-icon" href="../SocialMedia/index.html"><i class="fa fa-thumbs-up"></i> Social Media</a></li>
+            </ul>            
+        </nav>
+
+        <!-- JavaScript for the Mobile Navigation Bar version -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const navToggle = document.querySelector('.nav-toggle');
+                const navMenu = document.querySelector('.nav-menu');
+
+                navToggle.addEventListener('click', function () {
+                    navMenu.classList.toggle('is-active');
+                });
+            });
+        </script>
+
+        <header>
+            <h1>INSCRIPTION</h1>
+        </header>
+
+        <!-- Embedded Google Form -->
+        <section class="google-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfkVIuczC_tdOmruzkDkWcY7yDFZAR0rM7w_fq0yiB9pzZOeQ/viewform?embedded=true" frameborder="0" marginheight="120px" marginwidth="120px">Loading…</iframe>
+        </section>
+
+        <!-- Footer -->    
+        <footer>
+            <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
+        </footer>
+
+    </body>
+</html>

@@ -18,6 +18,7 @@ nav {
 
 .nav-menu {
     display: flex;
+    height: auto;
     justify-content: space-around; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
     list-style: none;
@@ -33,14 +34,14 @@ nav {
 .nav-logo {
     width: 100px;
     height: 100px;
-    outline: blue 2px solid;
+    outline: red 2px solid;
 }
 
 .nav-icon {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    background-color: blue;
+    background-color: red;
     padding: 15px; /* Increased padding */
     border-radius: 15px; /* Slightly larger border-radius */
     font-size: 18px; /* Larger font size */
@@ -78,7 +79,7 @@ header {
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(Others/racingbkgrd.gif);
+    background-image: url(../Others/racingbkgrd.gif);
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 120px;
@@ -94,7 +95,7 @@ header h3 {
     margin-top: 36px;
 }
 
-.blue-gif, .yellow-gif {
+.red-gif, .yellow-gif {
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-clip: text;
@@ -103,20 +104,67 @@ header h3 {
     animation: play 1s steps(30) infinite;
 }
 
-.blue-gif {
-    background-image: url('Others/bluegif.gif');
+.red-gif {
     font-weight: bold;
-    text-decoration: underline;
+    color: black;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
 }
 
 .yellow-gif {
-    background-image: url('Others/yellowgif.gif');
+    background-image: url('../Others/yellowgif.gif');
     font-weight: bold;
 }
 
 @keyframes play {
     from { background-position: 0 0; }
     to { background-position: 100% 0; }
+}
+
+/* Countdown Timer Styles */
+#countdown {
+    background-color: #333; /* Dark background for contrast */
+    color: white; /* White text for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    width: 80%; /* Set a width for the countdown container */
+    margin: 0 auto; /* Margin auto for horizontal centering */
+}
+
+#countdown h3 {
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 15px;
+    color: #e74c3c; /* Reddish tone for emphasis */
+    text-transform: uppercase; /* Uppercase for stylistic choice */
+}
+
+#timer {
+    display: flex; /* Make #timer a Flex container */
+    justify-content: center; /* Horizontally center the child elements */
+    align-items: center; /* Vertically center the child elements */
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 1.5;
+    flex-wrap: wrap; /* Wrap items to next line on smaller screens */
+    gap: 10px; /* Add a gap between items */
+}
+
+#timer span {
+    display: inline-block;
+    min-width: 120px; /* Ensures uniform width */
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Reddish background for each unit */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+    color: #fff; /* White text for contrast */
+}
+
+#timer span:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+    cursor: pointer; /* Indicates interactivity */
 }
 
 /* General styles */
@@ -129,7 +177,7 @@ header h3 {
 .section1, .section2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center; /* Centers vertically */
+    align-items: center;
     text-align: center;
     margin: 40px;
     padding: 40px;
@@ -137,14 +185,15 @@ header h3 {
     border-color: white;
     border-width: 5px;
     border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 /* Styles for the text and image content */
 .content-text, .content-image {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     transition: transform 0.3s ease;
     border-radius: 12px;
@@ -157,41 +206,69 @@ header h3 {
 /* Styles for text */
 .content-text {
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .content-text h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 40px;
-    color: blue;
+    color: red;
     margin-bottom: 30px;
     animation: textGlow 1.5s ease-in-out infinite alternate;
 }
 
 .content-text p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
     text-align: justify;
     margin-bottom: 20px;
-    line-height: 32px;
     animation: fadeIn 2s;
+}
+
+.redy {
+    color: red;
 }
 
 /* Styles for images */
 .content-image img {
-    width: 60%; /* Adjust width to 100% of its container */
+    width: 100%; /* Adjust width to 100% of its container */
+    max-width: 400px; /* Optional: limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 20px;
-    outline: 10px solid blue;
+    outline: 10px solid red;
+}
+
+/* Smooth transitions for hover effects */
+*:hover {
+    transition: all 0.3s ease;
+}
+
+/* Improved typography for readability */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Consistent spacing and padding */
+.section1, .section2 {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
 /* Animation for glowing titles */
 @keyframes textGlow {
     from {
-        text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue;
+        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
     }
     to {
-        text-shadow: 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue;
+        text-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red;
     }
 }
 
