@@ -140,6 +140,20 @@ nav::after {
     margin-left: 5px; /* Space between the text and icon */
 }
 
+/* Adjustments for mobile devices and apology message */
+.mobile-message {
+    display: none;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    background-color: black;
+    flex-direction: column; /* Align children in a column */
+}
+
 /* Mobile Message - Coming Soon...*/
 .mobile-message h1 {
     text-align: justify;
@@ -157,10 +171,6 @@ nav::after {
 @media only screen and (max-width: 1024px) {
     .mobile-message {
         display: flex; /* Changed from block to flex */
-    }
-
-    .mobile-message h1 {
-        font-size: 0.8em;
     }
 
     /* Hide main content on mobile devices */

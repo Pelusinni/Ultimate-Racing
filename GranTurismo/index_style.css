@@ -117,7 +117,9 @@ footer {
     align-items: center; /* Centers content vertically */
     padding: 20px;
     margin-top: 50px;
+    font-size: 1.2em;
     color: white;
+    text-align: justify;
     background-color: black;
     flex-direction: column; /* Align children in a column */
 }
@@ -139,10 +141,6 @@ footer {
 @media only screen and (max-width: 1024px) {
     .mobile-message {
         display: flex; /* Changed from block to flex */
-    }
-
-    .mobile-message h1 {
-        font-size: 0.8em;
     }
 
     /* Hide main content on mobile devices */
