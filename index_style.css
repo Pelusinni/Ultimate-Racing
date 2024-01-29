@@ -259,6 +259,7 @@ footer {
     width: 250px;
     height: auto;
     margin-top: 20px; /* Adjusted margin-top for the image */
+    border-radius: 10px;
 }
 
 @media only screen and (max-width: 1024px) {
