@@ -240,17 +240,26 @@ footer {
 /* Adjustments for mobile devices and apology message */
 .mobile-message {
     display: none;
-    text-align: center;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
     padding: 20px;
     margin-top: 50px;
     font-size: 1.2em;
     color: white;
+    text-align: justify;
     background-color: black;
+    flex-direction: column; /* Align children in a column */
+}
+
+.mobile-message img {
+    width: 250px;
+    height: auto;
+    margin-top: 20px; /* Adjusted margin-top for the image */
 }
 
 @media only screen and (max-width: 1024px) {
     .mobile-message {
-        display: block;
+        display: flex; /* Changed from block to flex */
     }
 
     /* Hide main content on mobile devices */
