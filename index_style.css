@@ -251,6 +251,13 @@ footer {
     flex-direction: column; /* Align children in a column */
 }
 
+/* Mobile Message - Coming Soon...*/
+.mobile-message h1 {
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .mobile-message img {
     width: 250px;
     height: auto;
