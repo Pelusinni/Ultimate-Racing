@@ -85,7 +85,7 @@ nav::after {
 }
 
 .f1-teams-container h1 {
-    color: #d40d12;
+    color: #d40d12; /* Ferrari red color */
     text-align: center;
     margin-bottom: 30px;
     font-size: 48px;
@@ -100,19 +100,86 @@ nav::after {
 }
 
 .team h2 {
-    color: #d40d12;
+    color: #d40d12; /* Ferrari red color */
     border-bottom: 2px solid #d40d12;
     padding-bottom: 10px;
 }
 
 .driver {
+    display: flex; /* Aligns image and text side by side */
+    align-items: center; /* Centers items vertically */
     margin-top: 20px;
+}
+
+.driver img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    border-radius: 50%; /* Circular image */
+    margin-right: 15px; /* Space between image and text */
 }
 
 .driver h3 {
     font-size: 18px;
+    margin: 0; /* Removes default margin */
 }
 
-.driver p {
-    font-size: 14px;
+/* Adjustments for mobile devices and apology message */
+.mobile-message {
+    display: none;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    background-color: black;
+    flex-direction: column; /* Align children in a column */
+}
+
+/* Mobile Message - Coming Soon...*/
+.mobile-message h1 {
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mobile-message img {
+    width: 250px;
+    height: auto;
+    margin-top: 20px; /* Adjusted margin-top for the image */
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .mobile-message {
+        display: flex; /* Changed from block to flex */
+    }
+
+    /* Hide main content on mobile devices */
+    .container, nav, footer, .section1, .section2, header {
+        display: none;
+    }
+}
+
+/* Media Query for Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav {
+        padding: 20px; /* Reduced padding */
+    }
+
+    .nav-menu {
+        flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+        justify-content: center; /* Center items when wrapped */
+    }
+
+    .nav-menu li {
+        margin: 10px; /* Adjust margins for better spacing */
+        flex-basis: 100%; /* Make each item take full width when wrapped */
+        text-align: center; /* Center text for each item */
+    }
+
+    .nav-logo {
+        margin-bottom: 10px; /* Space between logo and menu items */
+    }
 }
