@@ -4,7 +4,7 @@ At Ultimate-Racing, we're fueled by speed, competition, and community. We're ded
 
 ## Check Out Our Website(s)
 
-### Github Pages Hosted: [Ultimate-Racing Official Website](https://pelusinni.github.io/Ultimate-Racing/)
+### Github Pages Hosted (Beta Versions): [Ultimate-Racing Official Website](https://pelusinni.github.io/Ultimate-Racing/)
 ### Netlify Hosted: [Ultimate-Racing Official Website](https://ultimateracing.netlify.app/)
 
 ## 🎮 Our Gaming Platforms
