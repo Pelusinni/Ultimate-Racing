@@ -237,52 +237,56 @@ footer {
     text-align: center;
 }
 
-/* Adjustments for mobile devices and apology message */
-.mobile-message {
-    display: none;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    padding: 20px;
-    margin-top: 50px;
-    font-size: 1.2em;
-    color: white;
-    text-align: justify;
-    background-color: black;
-    flex-direction: column; /* Align children in a column */
-}
-
-/* Mobile Version Styles */
+/* Base styles for mobile version - hidden by default */
 .mobile-version {
-    display: none; /* Hidden by default */
+    display: none;
     text-align: center;
-    background-color: black;
-    color: white;
-    padding: 20px 0;
+    background-color: #fff; /* Change as needed */
+    color: white; /* Change as needed */
+    padding: 20px;
 }
 
 .mobile-logo {
     width: 150px; /* Adjust as needed */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .mobile-options a {
     display: block;
-    color: white;
-    padding: 10px;
+    color: white; /* Change as needed */
+    background-color: #007bff; /* Change as needed */
     margin: 10px 0;
+    padding: 10px;
     text-decoration: none;
-    background-color: blue;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 768px) {
-    /* Show mobile version and hide desktop version */
+.mobile-options a:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Footer styles */
+.mobile-version footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: darkgrey;
+    border-top: 1px solid #ddd; /* Light border for separation */
+}
+
+.mobile-version footer p {
+    font-size: 14px;
+    color: white; /* Lighter text color */
+}
+
+/* Media Query for Mobile and Tablet Devices */
+@media screen and (max-width: 1024px) {
     .mobile-version {
-        display: block;
+        display: block; /* Show mobile version on small screens */
     }
 
-    nav, header, .section1, .section2, footer {
+    /* Hide the non-mobile elements */
+    nav, header, .section1, .section2, footer:not(.mobile-version footer) {
         display: none;
     }
 }
