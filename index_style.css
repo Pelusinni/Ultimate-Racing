@@ -237,51 +237,82 @@ footer {
     text-align: center;
 }
 
-/* Media Query for Mobile and Tablet Devices */
+/* Estilos ajustados para la versión móvil */
+.mobile-version {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el footer esté al fondo */
+    min-height: 100vh; /* Altura completa del viewport */
+    text-align: center;
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco para contraste */
+    padding: 20px;
+}
+
+/* Logo más pequeño */
+.mobile-logo {
+    width: 225px; /* Tamaño ajustado */
+    height: auto;
+    outline: 5px white solid;
+}
+
+/* Estilos para los botones de navegación móvil */
+.mobile-nav-icon {
+    display: block;
+    background-color: blue; /* Fondo azul para botones */
+    color: white; /* Texto blanco */
+    margin: 10px 0;
+    padding: 15px; /* Aumento de padding */
+    text-decoration: none;
+    border-radius: 15px; /* Bordes redondeados */
+    transition: transform 0.3s ease;
+    font-size: 18px; /* Tamaño de fuente mayor */
+}
+
+/* Estilos para el contenido dentro del botón */
+.button-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo de imagen dentro del botón */
+.mobile-f1logo {
+    height: 60px; /* Altura ajustada */
+    margin-right: 10px; /* Espacio entre imagen y texto */
+}
+
+.link-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+/* Estilo de texto dentro del botón */
+.button-content span {
+    color: white; /* Texto blanco */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Efecto hover para botones */
+.mobile-nav-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Estilos para el footer */
+.mobile-version footer {
+    padding: 25px;
+    text-align: center;
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+}
+
+/* Media Query para dispositivos móviles y tablets */
 @media screen and (max-width: 1024px) {
-    /* Base styles for mobile version - hidden by default */
     .mobile-version {
-        display: none;
-        text-align: center;
-        background-color: #fff; /* Change as needed */
-        color: white; /* Change as needed */
-        padding: 20px;
+        display: flex; /* Mostrar versión móvil en pantallas pequeñas */
     }
 
-    .mobile-logo {
-        width: 150px; /* Adjust as needed */
-        margin-bottom: 20px;
-    }
-
-    .mobile-options a {
-        display: block;
-        color: white; /* Change as needed */
-        background-color: #007bff; /* Change as needed */
-        margin: 10px 0;
-        padding: 10px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .mobile-options a:hover {
-        background-color: #0056b3; /* Darker shade for hover effect */
-    }
-
-    /* Footer styles */
-    .mobile-version footer {
-        margin-top: 20px;
-        padding-top: 10px;
-        background-color: darkgrey;
-        border-top: 1px solid #ddd; /* Light border for separation */
-    }
-
-    .mobile-version footer p {
-        font-size: 14px;
-        color: white; /* Lighter text color */
-    }
-
-    /* Hide the non-mobile elements */
+    /* Ocultar elementos no móviles */
     nav, header, .section1, .section2, footer:not(.mobile-version footer) {
         display: none;
     }
