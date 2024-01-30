@@ -3,8 +3,9 @@
 At Ultimate-Racing, we're fueled by speed, competition, and community. We're dedicated to creating an immersive and exhilarating experience for all fans of virtual racing. Our leagues are open to players from all over the world, regardless of their skill level.
 
 ## Check Out Our Website(s)
-Github Pages Hosted: [Ultimate-Racing Official Website](https://pelusinni.github.io/Ultimate-Racing/)
-Netlify Hosted: [Ultimate-Racing Official Website](https://ultimateracing.netlify.app/)
+
+### Github Pages Hosted: [Ultimate-Racing Official Website](https://pelusinni.github.io/Ultimate-Racing/)
+### Netlify Hosted: [Ultimate-Racing Official Website](https://ultimateracing.netlify.app/)
 
 ## 🎮 Our Gaming Platforms
 
