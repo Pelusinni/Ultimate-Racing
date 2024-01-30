@@ -237,52 +237,48 @@ footer {
     text-align: center;
 }
 
-/* Base styles for mobile version - hidden by default */
-.mobile-version {
-    display: none;
-    text-align: center;
-    background-color: #fff; /* Change as needed */
-    color: white; /* Change as needed */
-    padding: 20px;
-}
-
-.mobile-logo {
-    width: 150px; /* Adjust as needed */
-    margin-bottom: 20px;
-}
-
-.mobile-options a {
-    display: block;
-    color: white; /* Change as needed */
-    background-color: #007bff; /* Change as needed */
-    margin: 10px 0;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.mobile-options a:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
-}
-
-/* Footer styles */
-.mobile-version footer {
-    margin-top: 20px;
-    padding-top: 10px;
-    background-color: darkgrey;
-    border-top: 1px solid #ddd; /* Light border for separation */
-}
-
-.mobile-version footer p {
-    font-size: 14px;
-    color: white; /* Lighter text color */
-}
-
 /* Media Query for Mobile and Tablet Devices */
 @media screen and (max-width: 1024px) {
+    /* Base styles for mobile version - hidden by default */
     .mobile-version {
-        display: block; /* Show mobile version on small screens */
+        display: none;
+        text-align: center;
+        background-color: #fff; /* Change as needed */
+        color: white; /* Change as needed */
+        padding: 20px;
+    }
+
+    .mobile-logo {
+        width: 150px; /* Adjust as needed */
+        margin-bottom: 20px;
+    }
+
+    .mobile-options a {
+        display: block;
+        color: white; /* Change as needed */
+        background-color: #007bff; /* Change as needed */
+        margin: 10px 0;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .mobile-options a:hover {
+        background-color: #0056b3; /* Darker shade for hover effect */
+    }
+
+    /* Footer styles */
+    .mobile-version footer {
+        margin-top: 20px;
+        padding-top: 10px;
+        background-color: darkgrey;
+        border-top: 1px solid #ddd; /* Light border for separation */
+    }
+
+    .mobile-version footer p {
+        font-size: 14px;
+        color: white; /* Lighter text color */
     }
 
     /* Hide the non-mobile elements */
