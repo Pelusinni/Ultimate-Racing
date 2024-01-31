@@ -81,11 +81,11 @@ nav::after {
 }
 
 #social-media h2 {
-    margin-bottom: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: white;
+    font-weight: bold; /* Makes text bolder */
+    font-size: 28px; /* Slightly larger text */
+    color: white; /* Example color - you can choose your own */
+    text-shadow: 1px 1px 2px black; /* Optional shadow for depth */
+    margin-bottom: 32px;
 }
 
 .social-grid {
@@ -138,49 +138,70 @@ footer {
     flex-direction: column; /* Align children in a column */
 }
 
-/* Mobile Message - Coming Soon...*/
-.mobile-message h1 {
+/* Adjustments for desktop devices and apology message */
+.desktop-message {
+    display: none;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    background-color: black;
+    flex-direction: column; /* Align children in a column */
+}
+
+/* Desktop Message - Coming Soon...*/
+.desktop-message h1 {
     text-align: justify;
     font-size: 1.2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.mobile-message img {
+.desktop-message img {
     width: 250px;
     height: auto;
     margin-top: 20px; /* Adjusted margin-top for the image */
     border-radius: 10px;
 }
 
+/* Media Query for screens smaller than 1024px (Both Landscape and Portrait) */
 @media only screen and (max-width: 1024px) {
-    .mobile-message {
-        display: flex; /* Changed from block to flex */
+    /* Hide main content and display desktop message */
+    .container, .section1, .section2, header, footer {
+        display: none;
     }
 
-    /* Hide main content on mobile devices */
-    .container, nav, footer, .section1, .section2, header {
+    #countdown {
         display: none;
+    }
+
+    .desktop-message {
+        display: flex; /* Show desktop message */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
 
-/* Media Query for Tablets */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav {
-        padding: 20px; /* Reduced padding */
+/* Media Query specifically for Mobile Devices */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+    .mobile-message {
+        display: flex; /* Show mobile message */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
-    .nav-menu {
-        flex-wrap: wrap; /* Allows items to wrap in smaller screens */
-        justify-content: center; /* Center items when wrapped */
+    #countdown {
+        display: none;
     }
 
-    .nav-menu li {
-        margin: 10px; /* Adjust margins for better spacing */
-        flex-basis: 100%; /* Make each item take full width when wrapped */
-        text-align: center; /* Center text for each item */
-    }
-
-    .nav-logo {
-        margin-bottom: 10px; /* Space between logo and menu items */
+    /* Hide all other content */
+    .container, nav, .section1, .section2, header, footer, .desktop-message {
+        display: none;
     }
 }
