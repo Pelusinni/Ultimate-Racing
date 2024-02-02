@@ -42,15 +42,30 @@ nav {
 
 /* Styling for the main title */
 header {
-    background-color: black;
+    position: relative; /* Ensure positioning context */
     color: white;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(../Others/racingbkgrd.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 120px;
     padding-bottom: 120px;
+}
+
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place it behind the content */
+}
+
+.header-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: playGif 20s linear infinite; /* Slow down the GIF */
+    opacity: 0.5; /* Semi-transparent */
 }
 
 header h1 {
