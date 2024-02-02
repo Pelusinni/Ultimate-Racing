@@ -1,10 +1,9 @@
 /* Style for the full body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Readable and modern font */
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+    background-color: black; /* Light background for the page */
 }
 
 /* General styles for the navigation bar */
@@ -42,25 +41,187 @@ nav {
     transform: scale(1.2);
 }
 
+/* Styling for the main title */
+header {
+    position: relative; /* Ensure positioning context */
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
 header h1 {
-    font-weight: bold; /* Makes text bolder */
-    font-size: 48px; /* Slightly larger text */
-    color: crimson; /* Example color - you can choose your own */
-    text-shadow: 1px 1px 2px black; /* Optional shadow for depth */
+    font-size: 40px;
 }
 
-section {
-    margin: 20px;
+.racenet-title {
+    font-size: 40px;
+    background: linear-gradient(to right, pink, purple, #ff6347, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* This makes the text itself transparent, showing the gradient */
+    display: inline-block; /* Necessary for gradients to work on text */
+}
+
+@keyframes play {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}
+
+/* General styles */
+.content {
     padding: 15px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 8px;
+    text-align: center;
 }
 
-iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
+/* Styles for section1 and section2 */
+.section1, .section2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin: 40px;
+    padding: 40px;
+    background-color: black;
+    border-color: white;
+    border-width: 5px;
+    border-style: solid;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Styles for the text and image content */
+.content-text, .content-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.content-text:hover, .content-image:hover {
+    transform: scale(1.05);
+}
+
+/* Styles for text */
+.content-text {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-text h2 {
+    font-size: 40px;
+    color: crimson;
+    margin-bottom: 30px;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+.content-text p {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+}
+
+.redy {
+    color: crimson;
+}
+
+/* Styles for images */
+.content-image img {
+    width: 100%; /* Adjust width to 100% of its container */
+    max-width: 400px; /* Optional: limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;
+    outline: 10px solid crimson;
+}
+
+/* Smooth transitions for hover effects */
+*:hover {
+    transition: all 0.3s ease;
+}
+
+/* Improved typography for readability */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Consistent spacing and padding */
+.section1, .section2 {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+/* Style for the link */
+.raceNet-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raceNet-link {
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 25px; /* Rounded corners */
+    background-image: linear-gradient(to right, pink, purple, #ff6347, blue); /* Gradient background */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from link */
+    font-size: 20px; /* Larger font size for better readability */
+    text-align: center; /* Ensures the text is centered */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the link */
+.raceNet-link:hover {
+    transform: scale(1.1); /* Slightly enlarges the link on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Animation for glowing titles */
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px crimson, 0 0 20px crimson, 0 0 30px crimson, 0 0 40px crimson;
+    }
+    to {
+        text-shadow: 0 0 20px crimson, 0 0 30px crimson, 0 0 40px crimson, 0 0 50px crimson, 0 0 60px crimson;
+    }
+}
+
+/* Smooth appearance animation for paragraphs */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alternate layout for odd sections */
+.section1:nth-child(odd) {
+    grid-template-areas: "image text";
+}
+
+.section1:nth-child(odd) .content-text {
+    grid-area: text;
+}
+
+.section2:nth-child(odd) .content-image {
+    grid-area: image;
 }
 
 footer {

@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Calendar</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-            <link rel="icon" type="image/x-icon" href="../../Others/logometa.png">
-            <link rel="stylesheet" href="../../Others/Reset.css">
-            <link rel="stylesheet" href="index_style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ultimate Formula</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="../Others/logometa.png">
+        <link rel="stylesheet" href="../Others/Reset.css">
+        <link rel="stylesheet" href="index_style.css">
     </head>
 
     <body>
-
         <!-- Sorry Message for devices that are NOT Desktop -->
         <div class="mobile-message">
             <h1>We're sorry, this website is currently only available on desktop devices. We're working on a mobile app, which will be available this year. Stay tuned!</h1>
-            <img src="Others/working.gif" alt="working">
+            <img src="../Others/working.gif" alt="working">
+        </div>
+
+        <!-- Sorry Message for Desktop -->
+        <div class="desktop-message">
+            <h1>We're sorry, make the window bigger. We're working on a mobile app and trying to fix this. Both upgrades will be avaliable this year. Stay tuned!</h1>
+            <img src="../Others/working.gif" alt="working">
         </div>
 
         <!-- Navigation Bar -->
         <nav>
             <div class="nav-menu">
-                <a href="../../index.html">
+                <a href="../index.html">
                     <img class="nav-logo" src="../../Others/ultimateformulalogo.png" alt="Car Logo">
                 </a>
                 <a class="nav-icon" href="../index.html"><i class="fa fa-home"></i> Home</a>
@@ -33,26 +38,76 @@
             </div>            
         </nav>
 
-        <!-- Header -->
+        <!-- JavaScript for the Mobile Navigation Bar version -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            navToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('is-active');
+                });
+            });
+        </script>
+
+        <!-- Header for the Title -->
         <header>
-            <h1>ULTIMATE FORMULA Classification</h1>
+            <h1>Ultimate Formula + <span class="racenet-title">RACENET</span></h1>
         </header>
 
-        <!-- Drivers Section -->
-        <section id="drivers-championship">
-            <h2>Drivers Championship</h2>
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc65FzCdgvyb0-UMZXpoWtXgcP1v4LtzCoBEy59ctlinbL6nVtCw-G4E1sRchsboPOIjcqaPXXqs0j/pubhtml?gid=1884078695&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; height:500px;"></iframe>
-        </section>
+        <!-- RaceNet Link -->
+        <div class="raceNet-link-container">
+            <a href="https://racenet.com/" target="_blank" class="raceNet-link">RaceNet Official Webpage</a>
+        </div>
 
-        <!-- Contructors Section -->
-        <section id="constructors-championship">
-            <h2>Constructors Championship</h2>
-            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQc65FzCdgvyb0-UMZXpoWtXgcP1v4LtzCoBEy59ctlinbL6nVtCw-G4E1sRchsboPOIjcqaPXXqs0j/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; height:500px;"></iframe>
-        </section>
+        <!-- Section 1: RaceNet Introduction -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>What is EA Sports RaceNet?</h2>
+                <p>RaceNet from EA Sports is an innovative platform designed to enhance racing experiences, offering a comprehensive suite of features for competitive racing gamers. It provides a centralized hub for tracking race results, comparing stats, and managing leagues across various EA Sports racing titles.</p>
+            </div>
+            <div class="content-image">
+                <img src="../../Others/earacenet.jpg" alt="RaceNet">
+            </div>
+        </div>
+
+        <!-- Section 2: Remote Administration -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Remote League Management</h2>
+                <p>We will be integrating RaceNet for remote management of our league within the game. This allows for seamless organization of events, monitoring of player progress, and easier communication among league participants.</p>
+            </div>
+            <div class="content-image">
+                <img src="../../Others/settings.jpg" alt="League Management">
+            </div>
+        </div>
+
+        <!-- Section 3: Performance Driver -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Track Your Performance</h2>
+                <p>With RaceNet, you can view your league results, compare lap times, setups, and performance on any circuit against friends and racers worldwide. This feature is designed to help you identify areas for improvement and enhance your racing skills.</p>
+            </div>
+            <div class="content-image GPT">
+                <img src="../../Others/performance.jpg" alt="Performance">
+            </div>
+        </div>
+
+        <!-- Section 4: Avaliability -->
+        <div class="section1">
+            <div class="content-text">
+                <h2>Accessible Anytime, Anywhere</h2>
+                <p>RaceNet is not just limited to your gaming console or PC. With its dedicated app and website, you can stay connected to your league and racing stats on the go, ensuring you're always ready for your next race.</p>
+            </div>
+            <div class="content-image">
+                <img src="../../Others/avaliability.jpg" alt="AnyTime">
+            </div>
+        </div>
 
         <!-- Footer -->    
         <footer>
             <p>&copy; 2024 Ultimate Racing. All rights reserved.</p>
         </footer>
+
     </body>
 </html>
