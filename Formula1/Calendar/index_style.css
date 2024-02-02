@@ -7,70 +7,40 @@ body {
     color: white;
 }
 
-/* Style for the navigation Bar */
+/* General styles for the navigation bar */
 nav {
     background-color: black;
     text-align: center;
-    position: relative;
-    padding: 40px; /* Adjusted padding-top */
-    
+    padding: 20px; /* Adjusted padding */
 }
 
 .nav-menu {
     display: flex;
     justify-content: space-around; /* Centers items horizontally */
     align-items: center; /* Centers items vertically */
-    list-style: none;
     margin: 0;
     padding: 0;
-    height: 50px; /* Set a specific height for the nav-menu */
 }
-
-.nav-menu li {
-    margin: 0 15px;
-} 
 
 .nav-logo {
     width: 100px;
     height: 100px;
-    outline: red 2px solid;
+    outline: crimson 2px solid;
 }
 
 .nav-icon {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
-    background-color: red;
+    background-color: crimson;
     padding: 15px; /* Increased padding */
     border-radius: 15px; /* Slightly larger border-radius */
     font-size: 18px; /* Larger font size */
     transition: transform 0.3s ease;
 }
 
-nav ul li:hover{
+.nav-icon:hover {
     transform: scale(1.2);
 }
-
-/* Commented out to remove the white bars */
-/*
-nav::before, nav::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 100px; 
-    height: 5px;
-    background: white;
-    transform: translateY(-50%);
-}
-
-nav::before {
-    left: 20px;
-}
-
-nav::after {
-    right: 20px;
-}
-*/
 
 /* Styles for F1 Calendar */
 .f1-calendar-container {
@@ -83,7 +53,7 @@ nav::after {
 }
 
 .f1-calendar-container h1 {
-    color: #d40d12;
+    color: crimson;
     text-align: center;
     margin-bottom: 30px;
     font-size: 48px; /* Increased font size for the title */
@@ -125,7 +95,7 @@ nav::after {
 .race-date {
     text-align: left; /* Align the date to the left within its cell */
     font-weight: bold;
-    color: #d40d12;
+    color: crimson;
     margin-right: 10px; /* Ensure some space between the date and the weather */
 }
 

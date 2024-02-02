@@ -24,13 +24,13 @@ nav {
 .nav-logo {
     width: 100px;
     height: 100px;
-    outline: darkred 2px solid;
+    outline: crimson 2px solid;
 }
 
 .nav-icon {
     color: white;
     text-decoration: none;
-    background-color: red;
+    background-color: crimson;
     padding: 15px; /* Increased padding */
     border-radius: 15px; /* Slightly larger border-radius */
     font-size: 18px; /* Larger font size */
@@ -120,7 +120,7 @@ header h3 {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 15px;
-    color: #e74c3c; /* Reddish tone for emphasis */
+    color: crimson; /* Reddish tone for emphasis */
     text-transform: uppercase; /* Uppercase for stylistic choice */
 }
 
@@ -140,7 +140,7 @@ header h3 {
     min-width: 120px; /* Ensures uniform width */
     margin: 0 5px;
     padding: 10px 20px;
-    background-color: #e74c3c; /* Reddish background for each unit */
+    background-color: crimson; /* Reddish background for each unit */
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Shadow for depth */
     color: #fff; /* White text for contrast */
@@ -195,7 +195,7 @@ header h3 {
 
 .content-text h2 {
     font-size: 40px;
-    color: red;
+    color: crimson;
     margin-bottom: 30px;
     animation: textGlow 1.5s ease-in-out infinite alternate;
 }
@@ -209,7 +209,7 @@ header h3 {
 }
 
 .redy {
-    color: red;
+    color: crimson;
 }
 
 /* Styles for images */
@@ -218,7 +218,7 @@ header h3 {
     max-width: 400px; /* Optional: limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 20px;
-    outline: 10px solid red;
+    outline: 10px solid crimson;
 }
 
 /* Smooth transitions for hover effects */
@@ -249,10 +249,10 @@ footer {
 /* Animation for glowing titles */
 @keyframes textGlow {
     from {
-        text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+        text-shadow: 0 0 10px crimson, 0 0 20px crimson, 0 0 30px crimson, 0 0 40px crimson;
     }
     to {
-        text-shadow: 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red;
+        text-shadow: 0 0 20px crimson, 0 0 30px crimson, 0 0 40px crimson, 0 0 50px crimson, 0 0 60px crimson;
     }
 }
 
