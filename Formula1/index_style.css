@@ -24,6 +24,7 @@ nav {
 .nav-logo {
     width: 100px;
     height: 100px;
+    outline: darkred 2px solid;
 }
 
 .nav-icon {
